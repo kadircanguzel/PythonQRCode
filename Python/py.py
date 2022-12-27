@@ -46,11 +46,8 @@ def yapistir():
     url = pyqrcode.create(E1.get())
 
     qr = E1.get()
-    # Dosya Adına, yazılan veri verileceği için Windows'un desteklemediği karakterleri replace ediyoruz.
     karakter = re.sub(r'[\\/\:*"<>\|\.%\$\?^&£]', '', qr)
-
-    # Burası ezbere yapıldı. URL girilirse https gibi alanları atlaması için yapıldı.
-    # Daha gelişmiş yapmak istiyorsanız https:// gibi alanlar aynı yöntemle silinebilir.
+    
     if len(karakter) <= 10:
         yeni = karakter
     else:
