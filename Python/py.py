@@ -46,8 +46,10 @@ def yapistir():
     url = pyqrcode.create(E1.get())
 
     qr = E1.get()
+   
     karakter = re.sub(r'[\\/\:*"<>\|\.%\$\?^&£]', '', qr)
-    
+
+   
     if len(karakter) <= 10:
         yeni = karakter
     else:
@@ -55,7 +57,7 @@ def yapistir():
     url.png(Python+yeni+".png", scale=12)
     resim = Python+yeni+".png"
 
-    # Tk ekranına QR kodunu koyabilmek için bu alan zorunludur.
+
     im = Image.open(resim)
     im = im.resize((200,200), Image.ANTIALIAS)
     tkimage = ImageTk.PhotoImage(im)
