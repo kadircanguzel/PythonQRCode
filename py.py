@@ -42,7 +42,7 @@ def do_popup(event):
 E1.bind("<Button-3>", do_popup)
 
 def yapistir():
-    Python = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Python\\')
+    Python = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Python\\') #'Python yazan yere kendi dosya konumunuzu girmeniz lazım.
     url = pyqrcode.create(E1.get())
 
     qr = E1.get()
